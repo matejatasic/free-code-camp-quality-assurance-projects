@@ -10,7 +10,7 @@ module.exports = function (app) {
     if (!request.query.input) {
       response.send("invalid input");
     }
-    console.log(request.query.input);
+    
     let initNumber;
     let initUnit;
 
