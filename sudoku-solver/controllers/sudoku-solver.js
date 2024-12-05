@@ -267,52 +267,6 @@ class SudokuSolver {
             return false;
         }
     }
-
-    // solveRecursive = () => {
-    //     const emptyIndex = this.findEmptyPosition(puzzleArray);
-    //     if (emptyIndex === -1) {
-    //         return true;
-    //     }
-
-    //     const { row, column } = this.indexToRowCol(emptyIndex);
-
-    //     for (let num = 1; num <= 9; num++) {
-    //         const value = num.toString();
-
-    //         if (
-    //             this.checkRowPlacement(puzzleArray.join(""), row, column, value) &&
-    //             this.checkColPlacement(puzzleArray.join(""), row, column, value) &&
-    //             this.checkRegionPlacement(puzzleArray.join(""), row, column, value)
-    //         ) {
-    //             puzzleArray[emptyIndex] = value;
-
-    //             if (this.solveRecursive()) {
-    //                 return true;
-    //             }
-
-    //             puzzleArray[emptyIndex] = ".";
-    //         }
-    //     }
-
-    //     return false;
-    // };
-
-    // findEmptyPosition = (puzzleArray) => {
-    //     for (let i = 0; i < 81; i++) {
-    //         if (puzzleArray[i] === ".") {
-    //             return i;
-    //         }
-    //     }
-    //     return -1;
-    // };
-
-    // indexToRowCol = (index) => {
-    //     const rowIndex = Math.floor(index / 9);
-    //     const colIndex = index % 9;
-    //     const row = "ABCDEFGHI"[rowIndex];
-    //     const column = colIndex + 1;
-    //     return { row, column };
-    // };
 }
 
 module.exports = SudokuSolver;
